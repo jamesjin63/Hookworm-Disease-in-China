@@ -20,3 +20,42 @@ This repository contains the code and data processing pipeline for the spatial e
 - Provide policy-relevant guidance for targeted hookworm control in endemic areas.
 
 ---
+
+---
+
+## 🧪 Methods Overview
+
+### 1. **Spatial Analysis**
+- **Global Moran's I** and **Local Indicators of Spatial Association (LISA)** to detect spatial autocorrelation.
+- **Hotspot analysis (Getis-Ord Gi*)** for high-risk clustering.
+- **Standard Deviation Ellipse (SDE)** for directional trend and geographic center estimation.
+
+### 2. **Spatiotemporal Scan**
+- Conducted using **SaTScan** software to identify clusters in space-time dimension.
+- Poisson model used to detect significant risk areas from 2016–2021.
+
+### 3. **Machine Learning Modeling**
+- Gradient Boosting Trees (XGBoost) to determine key predictors among 40 variables.
+- Top risk factors: 
+  - Frequency of barefoot farming
+  - Land use/land cover type
+  - Q3 average relative humidity
+  - Q3 average sunshine hours
+
+---
+
+## 🔑 Key Findings
+
+- High hookworm prevalence in **southwestern China**; coldspots in **northeastern China**.
+- Higher risk among **elderly (≥60 years)** and **females**.
+- Climatic and behavioral factors interact significantly.
+- **Barefoot farming** is the strongest modifiable risk factor.
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/hookworm-risk-mapping.git
+cd hookworm-risk-mapping
+pip install -r requirements.txt
